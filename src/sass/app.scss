@@ -1,0 +1,148 @@
+/* Sass */
+
+@import './variable';
+
+
+.inner {
+	width: 100%;
+	max-width: $maxWidth;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header {
+
+	max-width: $maxWidth;
+
+	&__logo {
+		width: 80px;
+	}
+	&__list {
+		display: flex;
+
+		& > li {
+			margin-left: 30px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+		&__link {
+			text-decoration: none;
+			color: #666;
+			font: {
+				size: 16px;
+				weight: bold;
+			}
+
+			&:hover {
+				color: $brandColor;
+			}
+		}
+	}
+}
+
+.parent {
+	padding: $padding;
+	background-color: #fff;
+
+	&__ttl {
+		color: #333;
+		text-align: center;
+		font:{
+			size: 20px;
+			weight: bold;
+		}
+	}
+}
+
+.children {
+	padding: $padding;
+	background-color: #f5f5f5;
+	&__ttl {
+		@extend .parent__ttl;
+	}
+}
+
+@mixin btn($color) {
+	display: block;
+	padding: 20px 30px;
+	color: #fff;
+	border-radius: 6px;
+	cursor: pointer;
+	background-color: $color;
+	text: {
+		decoration: none;
+		align: center;
+	}
+}
+
+.footer {
+	padding: $padding;
+
+	&__sns {
+		&__list {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			& > li {
+				width: 32%;
+
+				&:nth-child(n+4) {
+					margin-top: 20px;
+				}
+			}
+		}
+		&__btn {
+
+			/* 問題1 */
+			&.is-facebook {
+				@include btn(#4668b3);
+			}
+			&.is-google {
+				@include btn(#de5745);
+			}
+			&.is-twitter {
+				@include btn(#2fbbed);
+			}
+			&.is-pinterest {
+				@include btn(#d94348);
+			}
+			&.is-behance {
+				@include btn(#3079ff);
+			}
+			&.is-dribbble {
+				@include btn(#eb6397);
+			}
+
+			/* 問題2 */
+			@each $list in $class {
+				$i: index($class, $list);
+
+				&.is-#{$list} {
+					@include btn(nth($color, $i));
+				}
+			}
+
+			/* 問題3 */
+			@each $class, $color in $map {
+				&.is-#{$class} {
+					@include btn(map-get($map, $class));
+				}
+			}
+		}
+	}
+}
+
+@for $i from 1 through 4 {
+	.mt#{$i * 5} {
+		margin-top: #{$i * 5}px;
+	}
+}
