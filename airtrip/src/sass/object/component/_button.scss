@@ -1,0 +1,23 @@
+.c-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.c-btn {
+	width: 320px;
+	padding: 10px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+	&:hover {
+		opacity: .8;
+	}
+}
+.c-btn--submit {
+	@extend .c-btn;
+	background: #41a1d5;
+}

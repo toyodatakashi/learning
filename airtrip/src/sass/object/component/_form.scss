@@ -1,0 +1,67 @@
+.c-checkboxes {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+.c-checkbox {
+	width: 228px;
+	height: 65px;
+	margin: 0 19px;
+	background: #c9caca;
+	border-radius: 3px;
+	box-sizing: border-box;
+	color: #fff;
+	font: {
+		size: 14px;
+		weight: bold;
+	}
+	text-align: center;
+	& > input {
+		display: none;
+		&[type="checkbox"]:checked + label {
+			background: #f39800;
+			& > .c-checkbox__icon {
+				&::before,
+				&::after {
+					background: #f39800;
+				}
+				&::after {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	&__icon {
+		width: 14px;
+		height: 14px;
+		display: block;
+		margin: 0 auto 8px;
+		background: #fff;
+		border-radius: 50%;
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			width: 8px;
+			height: 2px;
+			position: absolute;
+			display: inline-block;
+			top: 6px;
+			left: 3px;
+			background: #c9caca;
+		}
+		&::after {
+			display: none;
+			transform: rotate(90deg);
+		}
+	}
+	& > label {
+		display: block;
+		height: 65px;
+		padding-top: 15px;
+		box-sizing: border-box;
+		line-height: 1.0;
+		cursor: pointer;
+	}
+}
