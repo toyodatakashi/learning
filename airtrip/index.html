@@ -5,6 +5,8 @@
 	<title>AirTrip</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="./dist/css/app.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="src/js/top.js"></script>
 </head>
 <body>
 	<header class="l-header">
@@ -39,9 +41,9 @@
 				</li>
 			</ul>
 			<ul class="c-checkboxes">
-				<li class="c-checkbox"><input type="checkbox" name="" id="check01"><label for="check01"><i class="c-checkbox__icon"></i>朝食付</label></li>
-				<li class="c-checkbox"><input type="checkbox" name="" id="check02"><label for="check02"><i class="c-checkbox__icon"></i>夕食付</label></li>
-				<li class="c-checkbox"><input type="checkbox" name="" id="check03"><label for="check03"><i class="c-checkbox__icon"></i>食事不問</label></li>
+				<li class="c-checkbox js-checkmeal"><input type="checkbox" name="" id="check01" class="js-needmeal"><label for="check01"><i class="c-checkbox__icon"></i>朝食付</label></li>
+				<li class="c-checkbox js-checkmeal"><input type="checkbox" name="" id="check02" class="js-needmeal"><label for="check02"><i class="c-checkbox__icon"></i>夕食付</label></li>
+				<li class="c-checkbox js-checkmeal"><input type="checkbox" name="" id="check03" class="js-notneedmeal"><label for="check03"><i class="c-checkbox__icon"></i>食事不問</label></li>
 			</ul>
 			<div class="c-buttons">
 				<button type="submit" class="c-btn c-btn--submit">検索する</button>
