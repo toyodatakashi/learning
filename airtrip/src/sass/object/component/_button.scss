@@ -5,8 +5,10 @@
 }
 
 .c-btn {
-	width: 320px;
-	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
 	box-sizing: border-box;
 	border-radius: 3px;
 	color: #fff;
@@ -19,5 +21,18 @@
 }
 .c-btn--submit {
 	@extend .c-btn;
+	width: 320px;
 	background: #41a1d5;
+}
+.c-btn--clear {
+	@extend .c-btn;
+	width: 100px;
+	background: #fff;
+	border: 1px solid #ccc;
+	color: #9fa0a0;
+	font-size: 14px;
+	&:hover {
+		background: #e6e6e6;
+		border-color: #adadad;
+	}
 }

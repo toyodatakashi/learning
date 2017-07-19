@@ -73,3 +73,70 @@
 		}
 	}
 }
+
+.p-modal {
+	display: none;
+	opacity: 0;
+	&.is-open {
+		display: block;
+	}
+	&__bg {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .8);
+	overflow-y: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	}
+	&__contents {
+		display: inline-block;
+		width: 598px;
+		margin-left: -299px;
+		padding: 50px 53px;
+		box-sizing: border-box;
+		background: #fff;
+		position: fixed;
+		left: 50%;
+		z-index: 1100;
+	}
+	&__headding {
+		margin-bottom: 25px;
+		color: #41a1d5;
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 1.0;
+		text-align: center;
+	}
+	&__closebtn {
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		cursor: pointer;
+		&::before,
+		&::after {
+			display: inline-block;
+			content: "";
+			width: 20px;
+			height: 4px;
+			background: #000;
+			position: absolute;
+			top: 7px;
+			left: -1px;
+			transform: rotate(45deg);
+		}
+		&::after {
+			transform: rotate(135deg);
+		}
+		&--top {
+			top: 10px;
+			right: 15px;
+		}
+		&--bottom {
+			bottom: 10px;
+			left: 15px;
+		}
+	}
+}

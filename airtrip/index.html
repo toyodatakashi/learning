@@ -31,7 +31,7 @@
 					<span class="p-condition__q">いつ？</span><span class="p-condition__a p-condition__a--large">2017年07月07日　1泊</span>
 				</li>
 				<li class="p-condition">
-					<span class="p-condition__q">どこ？</span><span class="p-condition__a">東京都</span>
+					<span class="p-condition__q">どこ？</span><span class="p-condition__a js-modalbtn">東京都</span>
 				</li>
 				<li class="p-condition">
 					<span class="p-condition__q">だれと？</span><span class="p-condition__a">2名 予算指定なし</span>
@@ -40,6 +40,44 @@
 					<span class="p-condition__q">どんな？</span><span class="p-condition__a">旅館、ホテル、ビジネス</span>
 				</li>
 			</ul>
+			<div class="p-modal js-modal">
+				<div class="p-modal__bg js-modalbtn"></div>
+				<div class="p-modal__contents js-modalcontents">
+					<div class="p-modal__closebtn p-modal__closebtn--top js-modalbtn"></div>
+					<h2 class="p-modal__headding">行きたいところを選んでください。</h2>
+					<div class="p-searchbox">
+						<dl>
+							<dt>宿泊地</dt>
+							<dd>
+								<select name="" class="js-selectarea" id="area01">
+									<option value="tokyo">東京</option>
+									<option value="hokkaido">北海道</option>
+									<option value="osaka">大阪</option>
+									<option value="kagoshima">鹿児島</option>
+									<option value="okinawa">沖縄</option>
+								</select>
+							</dd>
+							<dt>エリア1</dt>
+							<dd>
+								<select name="" class="js-selectarea" id="area02">
+									<option value="00">選択しない</option>
+								</select>
+							</dd>
+							<dt>エリア2</dt>
+							<dd>
+								<select name="" class="js-selectarea" id="area03">
+									<option value="00">選択しない</option>
+								</select>
+							</dd>
+						</dl>
+						<div class="c-buttons">
+							<button type="button" class="c-btn c-btn--clear u-mr20 js-selectclearbtn">クリア</button>
+							<button type="button" class="c-btn c-btn--submit">決定</button>
+						</div>
+					</div>
+					<div class="p-modal__closebtn p-modal__closebtn--bottom js-modalbtn"></div>
+				</div>
+			</div>
 			<ul class="c-checkboxes">
 				<li class="c-checkbox js-checkmeal"><input type="checkbox" name="" id="check01" class="js-needmeal"><label for="check01"><i class="c-checkbox__icon"></i>朝食付</label></li>
 				<li class="c-checkbox js-checkmeal"><input type="checkbox" name="" id="check02" class="js-needmeal"><label for="check02"><i class="c-checkbox__icon"></i>夕食付</label></li>
