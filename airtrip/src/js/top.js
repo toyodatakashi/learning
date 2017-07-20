@@ -71,11 +71,12 @@ $(function() {
 		    $selectarea01 = $('#area01'),
 		    $selectarea02 =$('#area02'),
 		    $selectarea03 =$('#area03'),
-		    $cleaBtn = $('.js-selectclearbtn');
+		    $cleaBtn = $('.js-selectclearbtn'),
+		    initialVal;
 
 		$selectarea.each(function() {
-
-			var initialVal = $(this).find('option:first-child').prop('outerHTML');
+			initialVal = $(this).find('option:first-child').prop('outerHTML');
+		});
 
 			$.ajax({
 				type: 'GET',
@@ -125,8 +126,6 @@ $(function() {
 					target.append(areaOption);
 				}
 			}
-
-		});
 
 		function selectclear($clearelem, initialVal) {
 			$clearelem.html(initialVal);
